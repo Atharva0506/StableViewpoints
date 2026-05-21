@@ -8,27 +8,12 @@ import Pagination from "@/components/pagination"
 import Link from "next/link"
 import Footer from "@/components/footer"
 import Loading from "@/app/loading"
-interface BlogPost {
-  slug: string
-  title: string
-  author: string
-  date: string
-  image: string
-  excerpt: string
-  featured: boolean
-}
-
-interface PaginatedData {
-  posts: BlogPost[]
-  totalPages: number
-  hasNextPage: boolean
-  hasPrevPage: boolean
-}
+import type { PaginatedPosts } from "@/types/blog"
 
 export default function HomePage() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [paginatedData, setPaginatedData] = useState<PaginatedData | null>(null)
+  const [paginatedData, setPaginatedData] = useState<PaginatedPosts | null>(null)
   const [loading, setLoading] = useState(true)
   const [currentPage, setCurrentPage] = useState(1)
 
