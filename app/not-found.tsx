@@ -33,7 +33,7 @@ export default function NotFound() {
         <div className="text-center space-y-6 max-w-lg mx-auto bg-white/60 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-xl border border-white/50 relative overflow-hidden">
           {/* Top accent line */}
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#228B22] via-[#91A511] to-[#FFBF00]" />
-          
+
           <div className="space-y-2">
             <h2 className="text-8xl md:text-9xl font-bold font-playfair bg-gradient-to-r from-[#228B22] to-[#FFBF00] bg-clip-text text-transparent drop-shadow-sm">
               404
@@ -42,11 +42,11 @@ export default function NotFound() {
               Page Not Found
             </h3>
           </div>
-          
+
           <p className="text-gray-600 text-lg">
-            Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have been moved, renamed, or doesn&apos;t exist.
+            Sorry, we couldn&apos;t find the page you&apos;re looking for.
           </p>
-          
+
           <div className="pt-6 flex justify-center">
             <Link
               href="/"
