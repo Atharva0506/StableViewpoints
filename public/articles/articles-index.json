@@ -1,6 +1,15 @@
 {
   "articles":  [
     {
+        "slug": "randomness",
+        "title": "Randomness for Fairness and Stability",
+        "author": "Zahnentferner",
+        "date": "2026-05-24",
+        "image": "/images/randomness.png",
+        "excerpt": "Why randomness is, counter-intuitively, necessary.",
+        "featured": false
+    },
+    {
         "slug": "understanding-gluon-free-reserve-ratio-constraints",
         "title": "Understanding Gluon if you know Djed: Freedom from Reserve Ratio Constraints",
         "author": "Zahnentferner",
