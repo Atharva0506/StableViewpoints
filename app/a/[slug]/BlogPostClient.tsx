@@ -38,12 +38,14 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
         <div className="bg-white shadow-xl overflow-hidden border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10">
           {/* Hero Image */}
           {post.image && (
-            <div className="relative h-64 md:h-96">
+            <div className="relative w-full">
               <Image
                 src={post.image}
                 alt={post.title}
-                fill
-                className="object-cover"
+                width={1600}
+                height={900}
+                sizes="(max-width: 768px) 100vw, 800px"
+                className="w-full h-auto"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
