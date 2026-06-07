@@ -1,0 +1,127 @@
+name: "🚀 PR Preview — Cloudflare Tunnel"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+env:
+  NODE_VERSION: "20"
+
+jobs:
+  # ── Deploy Preview ──────────────────────────────────────────────────────────
+  deploy-preview:
+    name: "Deploy PR Preview"
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    
+    # Needs a slightly longer timeout since it stays alive to serve requests
+    timeout-minutes: 60 
+
+    steps:
+      - name: Set PR number
+        run: echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+
+      - name: Set PR SHA
+        run: echo "PR_SHA=$(echo ${{ github.event.pull_request.head.sha }} | cut -c1-7)" >> $GITHUB_ENV
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Start Next.js Dev Server
+        run: |
+          # Start the dev server in the background
+          npm run dev &
+          
+          # Wait for it to be ready
+          echo "Waiting for Next.js dev server on port 3000..."
+          while ! nc -z localhost 3000; do
+            sleep 1
+          done
+          echo "Server is up!"
+
+      - name: Install cloudflared
+        run: |
+          curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+          sudo dpkg -i cloudflared.deb
+
+      - name: Start Cloudflare Tunnel
+        run: |
+          # Start cloudflared and capture output
+          cloudflared tunnel --url http://localhost:3000 > tunnel.log 2>&1 &
+          
+          # Wait for URL to be generated
+          sleep 5
+          TUNNEL_URL=$(grep -o 'https://[-a-zA-Z0-9]*\.trycloudflare\.com' tunnel.log | head -n 1)
+          
+          if [ -z "$TUNNEL_URL" ]; then
+            echo "Failed to get tunnel URL. Tunnel log:"
+            cat tunnel.log
+            exit 1
+          fi
+          
+          echo "TUNNEL_URL=$TUNNEL_URL" >> $GITHUB_ENV
+          echo "Preview available at: $TUNNEL_URL"
+
+      - name: Find existing preview comment
+        uses: peter-evans/find-comment@v3
+        id: find_comment
+        with:
+          issue-number: ${{ env.PR_NUMBER }}
+          comment-author: "github-actions[bot]"
+          body-includes: "PR Preview Deployed"
+
+      - name: Post or update PR comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ env.PR_NUMBER }}
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          edit-mode: replace
+          body: |
+            ## 🚀 PR Preview Deployed! (Live Server)
+
+            | Detail | Value |
+            |--------|-------|
+            | **Live Preview** | [🔗 Open Preview](${{ env.TUNNEL_URL }}) |
+            | **Commit** | `${{ env.PR_SHA }}` |
+            | **Environment** | Cloudflare Tunnel → Next.js Dev Server |
+
+            > [!IMPORTANT]
+            > This preview is running live on the GitHub Actions runner.
+            > The tunnel will remain open for **60 minutes** from the latest push.
+            > If the link stops working, simply push a new commit or re-run the workflow to restart it.
+
+      - name: Keep Runner Alive
+        run: |
+          # Sleep to keep the runner (and the tunnel) alive
+          echo "Tunnel is running. Keeping job alive for 55 minutes..."
+          sleep 3300
+
+  # ── Cleanup Comment ────────────────────────────────────────────────────────
+  cleanup-preview:
+    name: "Cleanup PR Preview Comment"
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Update PR comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## 🚀 PR Preview Stopped
+
+            The preview for this PR has been turned off since the PR was closed.
