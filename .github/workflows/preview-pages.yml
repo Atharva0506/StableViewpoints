@@ -59,8 +59,11 @@ jobs:
       # Build with basePath pointing to the preview subdirectory
       - name: Build Next.js (static export)
         run: |
+          # Backup original config
+          cp next.config.mjs next.config.mjs.bak
+          
           # Override basePath for the PR preview subdirectory
-          cat > next.config.preview.mjs << 'EOF'
+          cat > next.config.mjs << 'EOF'
           const nextConfig = {
             output: 'export',
             trailingSlash: true,
@@ -72,8 +75,11 @@ jobs:
           export default nextConfig;
           EOF
           
-          # Build using the preview config
-          npx next build --config next.config.preview.mjs
+          # Build using the overwritten config
+          npx next build
+          
+          # Restore original config
+          mv next.config.mjs.bak next.config.mjs
 
       # ── Deploy to gh-pages subdirectory ────────────────────────────────
       - name: Deploy preview
