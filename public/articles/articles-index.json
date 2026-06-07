@@ -1,6 +1,15 @@
 {
   "articles":  [
     {
+        "slug": "pr-preview-environments-automating-review-workflows",
+        "title": "PR Preview Environments: Automating Review Workflows for Open Source Projects",
+        "author": "Atharva Naik",
+        "date": "2025-06-07",
+        "image": "/images/stablecoins.webp",
+        "excerpt": "How automated PR preview deployments help non-technical reviewers verify changes without running code locally, making open-source collaboration faster and more inclusive.",
+        "featured": true
+    },
+    {
         "slug": "understanding-gluon-free-reserve-ratio-constraints",
         "title": "Understanding Gluon if you know Djed: Freedom from Reserve Ratio Constraints",
         "author": "Zahnentferner",
