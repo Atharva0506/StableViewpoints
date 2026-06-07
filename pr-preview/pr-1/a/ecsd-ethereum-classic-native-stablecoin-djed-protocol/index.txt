@@ -1,0 +1,70 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+4:I[168,["874","static/chunks/874-af28c07e2d77bec7.js","345","static/chunks/app/not-found-6a3d6b88bf038d1d.js"],"default"]
+6:I[9665,[],"OutletBoundary"]
+9:I[3063,["63","static/chunks/63-94c05604d1f62b03.js","209","static/chunks/app/loading-8f725c68b84b7278.js"],"Image"]
+a:I[9665,[],"ViewportBoundary"]
+c:I[9665,[],"MetadataBoundary"]
+e:I[6614,[],""]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/eaead17c7dbfcd5d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","style"]
+0:{"P":null,"b":"TQP8OnOJubGH464hZl7FR","p":"/StableViewpoints/pr-preview/pr-1","c":["","a","ecsd-ethereum-classic-native-stablecoin-djed-protocol",""],"i":false,"f":[[["",{"children":["a",{"children":[["slug","ecsd-ethereum-classic-native-stablecoin-djed-protocol","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_363ac1 __variable_92842a","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L4",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["a",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","ecsd-ethereum-classic-native-stablecoin-djed-protocol","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5","$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false]},null,false]},[["$","div","l",{"className":"min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","$L9",null,{"src":"/logo-animated.gif","alt":"Loading...","width":80,"height":80,"unoptimized":true,"className":"w-20 h-20 mx-auto mb-4"}],["$","p",null,{"className":"text-gray-600","children":"Loading..."}]]}]}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","8LznF7SspO4Ci0ywx0NIv",{"children":[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:I[6835,["874","static/chunks/874-af28c07e2d77bec7.js","63","static/chunks/63-94c05604d1f62b03.js","12","static/chunks/12-75da118738931337.js","762","static/chunks/app/a/%5Bslug%5D/page-43340484a7e88e5f.js"],"default"]
+10:Td82,
+# ECSD: Ethereum Classic’s native stablecoin built with Djed Stablecoin Protocol
+
+## ECSD: The new native stablecoin on Ethereum Classic
+
+We extend our heartfelt thanks to the [ETC Grants DAO](https://etcgrantsdao.io/) for their support in our project to create a Djed-based stablecoin on Ethereum Classic. This grant will allow us to bring reliable stability to Ethereum Classic’s emerging decentralized financial ecosystem.
+
+### Why Ethereum Classic?
+
+Our decision to expand to Ethereum Classic is driven by the alignment between its principles and the values of The Stable Order. We believe that blockchain immutability and the principle of “code is law” are crucial for a stable world. Ethereum Classic’s history of upholding these principles, especially during the fork from Ethereum, demonstrates its commitment to stability.
+
+This makes it an ideal platform for a Djed-based stablecoin.
+
+### Supporting the OG EVM Blockchain
+
+We are also honored to contribute to Ethereum Classic, the original EVM and smart contract-capable blockchain. It’s our moral obligation to support the blockchain that paved the way for all EVM-compatible platforms.
+
+### About ECSD
+
+The Ethereum Classic Stable Dollar (ECSD), created by The Stable Order, will be based on the Osiris version of the [Djed Stablecoin Protocol](https://viewpoints.stability.nexus/a/what-is-the-djed-alliance/) and will be part of the [Djed Alliance](https://djed.one/). Here are its key features:
+
+- Immutability: Aligned with Ethereum Classic’s “code is law” principle, ECSD’s smart contracts cannot be altered once deployed.
+
+- Capital efficiency: The reserve surplus is tokenized to increase capital efficiency. These tokens (ECRS — Ethereum Classic Reserve Surplus Share) can be freely used within the Ethereum Classic ecosystem.
+
+- Autonomous: Fully decentralized with no governance. Minting and redemption of ECSD and reserve coins (ECRS) are fully autonomous and permissionless.
+
+- Price stability: Pegged to USD and supported by [formally verified mathematical theorems](https://eprint.iacr.org/2021/1069.pdf).
+
+- Fully backed: Backed by a reserve of ETC with a reserve ratio significantly greater than 100%.
+
+*[Learn more about the Djed Stablecoin Protocol](https://viewpoints.stability.nexus/a/what-is-the-djed-alliance/)*
+
+### The Djed Alliance
+
+The Djed Alliance unites all Djed-based stablecoins. Currently, there are four different deployments of Djed-based stablecoins on four different blockchains. All of these deployments have been empirically battle-tested in periods of market instability and play significant roles in their respective blockchain ecosystems.
+
+*[Learn more about the Djed Alliance](https://viewpoints.stability.nexus/a/what-is-the-djed-alliance/)*
+
+## Looking Forward
+
+ECSD will be the fifth Djed-based stablecoin, bringing reliable stability and utility to the Ethereum Classic ecosystem.
+
+### Stay Tuned!
+
+To stay updated on ECSD’s development, join us on [Discord](https://discord.gg/QREUF6YTRG) and follow us on [X](https://x.com/DjedAlliance).
+
+### About the Djed Alliance
+
+The [Djed Alliance](https://djed.one/) aims to stabilize the digital economy through the Djed Stablecoin Protocol.
+
+The Djed Stablecoin Protocol is deployed across multiple networks and can be used to create your stablecoin. Join our [growing community](https://discord.gg/ggxP4ttHgN) and together, we will advance the future of the decentralized economy.5:["$","$Lf",null,{"post":{"slug":"ecsd-ethereum-classic-native-stablecoin-djed-protocol","title":"ECSD: Ethereum Classic’s native stablecoin built with Djed Stablecoin Protocol","author":"Wen-Chiao Su","date":"2024-06-13","image":"/images/Ethereum Classic’s native stablecoin built with Djed Stablecoin Protocol.webp","excerpt":"Overview of ECSD, Ethereum Classic’s native USD-pegged stablecoin built with Djed.","featured":false,"content":"$10"}}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+8:null
+d:[["$","title","0",{"children":"Stable Viewpoints"}],["$","meta","1",{"name":"description","content":"An independent and decentralized publication focused on stability."}],["$","meta","2",{"name":"author","content":"Stable Viewpoints"}],["$","meta","3",{"name":"keywords","content":"stablecoins,blockchain,cryptocurrency,DeFi,economic stability,monetary systems,AI governance"}],["$","meta","4",{"name":"creator","content":"Stable Viewpoints"}],["$","meta","5",{"name":"publisher","content":"Stable Viewpoints"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://viewpoints.stability.nexus/"}],["$","meta","9",{"property":"og:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","10",{"property":"og:description","content":"An independent and decentralized publication focused on stability. Explore thoughtful perspectives on blockchain, cryptocurrencies, AI, DeFi, and economic stability."}],["$","meta","11",{"property":"og:url","content":"https://viewpoints.stability.nexus/"}],["$","meta","12",{"property":"og:site_name","content":"Stable Viewpoints"}],["$","meta","13",{"property":"og:locale","content":"en_US"}],["$","meta","14",{"property":"og:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:site","content":"@StabilityNexus"}],["$","meta","21",{"name":"twitter:creator","content":"@StabilityNexus"}],["$","meta","22",{"name":"twitter:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","23",{"name":"twitter:description","content":"An independent and decentralized publication focused on stability."}],["$","meta","24",{"name":"twitter:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","link","25",{"rel":"icon","href":"/images/favicon.ico"}],["$","link","26",{"rel":"apple-touch-icon","href":"/images/favicon.ico"}]]

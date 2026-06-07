@@ -1,0 +1,95 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+4:I[168,["874","static/chunks/874-af28c07e2d77bec7.js","345","static/chunks/app/not-found-6a3d6b88bf038d1d.js"],"default"]
+6:I[9665,[],"OutletBoundary"]
+9:I[3063,["63","static/chunks/63-94c05604d1f62b03.js","209","static/chunks/app/loading-8f725c68b84b7278.js"],"Image"]
+a:I[9665,[],"ViewportBoundary"]
+c:I[9665,[],"MetadataBoundary"]
+e:I[6614,[],""]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/eaead17c7dbfcd5d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","style"]
+0:{"P":null,"b":"TQP8OnOJubGH464hZl7FR","p":"/StableViewpoints/pr-preview/pr-1","c":["","a","what-is-djed-stablecoin-protocol",""],"i":false,"f":[[["",{"children":["a",{"children":[["slug","what-is-djed-stablecoin-protocol","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_363ac1 __variable_92842a","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L4",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["a",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","what-is-djed-stablecoin-protocol","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5","$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false]},null,false]},[["$","div","l",{"className":"min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","$L9",null,{"src":"/logo-animated.gif","alt":"Loading...","width":80,"height":80,"unoptimized":true,"className":"w-20 h-20 mx-auto mb-4"}],["$","p",null,{"className":"text-gray-600","children":"Loading..."}]]}]}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","7IFccNvYlcNK3xUcD_W_5",{"children":[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:I[6835,["874","static/chunks/874-af28c07e2d77bec7.js","63","static/chunks/63-94c05604d1f62b03.js","12","static/chunks/12-75da118738931337.js","762","static/chunks/app/a/%5Bslug%5D/page-43340484a7e88e5f.js"],"default"]
+10:T166d,
+# What is the Djed Stablecoin Protocol?
+
+## Introduction
+
+Researched and developed by a team of 5 expert engineers from Ergo, Emurgo, IOG, (who then later formed the [Djed Alliance and The Stable Order](https://djed.one/)), the Djed Stablecoin Protocol was created to tackle the stablecoin trilemma of achieving reliable stability, decentralization, and capital efficiency simultaneously — a challenge that eludes most stablecoins.
+
+While stablecoins like USDC and USDT offer relative stability, they are controlled by centralized entities. Similarly, algorithmic stablecoins, including MakerDAO’s DAI, face challenges in achieving full decentralization, often influenced by governance.
+
+Djed sets itself apart by addressing all three critical aspects.
+
+- It ensures a significant reserve surplus to maintain its value even in market downturns,
+- It operates on a decentralized framework that is tamperproof and immutable without the need for governance, and
+- It maximizes capital efficiency by tokenizing the reserve surplus with tokens that can be used elsewhere.
+
+Unique to Djed is its self-regulating mechanism that functions akin to an autonomous bank, algorithmically managing the buying and selling of stablecoins to keep their value stable without external intervention. In addition, Djed’s protocol is designed to be chain agnostic and open source, allowing for deployment across various networks to create native stablecoins.
+
+*[Learn how to deploy a Djed-based stablecoin on your blockchain](https://docs.djed.one/about-us/the-djed-alliance/create-a-djed-based-stablecoin)*
+
+## Battle-tested and proven
+
+Since its first deployment in early 2021, Djed has maintained its peg through numerous cryptocurrency market downturns, demonstrating unwavering stability. This is attributed to meticulous planning and rigorous testing across different scenarios. Key characteristics of Djed include:
+
+- Peer reviewed: [The Djed Stablecoin Protocol’s minimal version](https://ieeexplore.ieee.org/document/10174901) was accepted for presentation at the prestigious IEEE International Conference on Blockchain and Cryptocurrency, underscoring its academic and technical validation.
+
+- Formally verified: Stability theorems have been mathematically proven and the theorems and their proofs have been formally verified with bonded model checkers and interactive theorem provers.
+
+- Crypto-backed: Djed uses a reserve of an independently valuable crypto-asset, usually the native cryptocurrency of the underlying blockchain to back the stablecoins and provide them with intrinsic value.
+
+Learn more: Crypto-backed and crypto-collateralized are [two different concepts](https://medium.com/djed-alliance/addressing-the-stablecoin-trilemma-da3191162a13)
+
+- Maintaining a Reserve Surplus: With reserve levels typically ranging from 400% to 800%, Djed significantly reduces the risk of de-pegging, ensuring stable performance even amidst market volatility.
+
+- Truly decentralized: Once deployed, its contract is immutable, tamperproof, and operates autonomously requiring no governance.
+
+- Fully transparent: Everything is public and recorded on-chain.
+
+- Maximizing security: Djed can be natively deployed across various blockchains, strengthening chain security without the need for wrapped tokens or bridges, thus mitigating associated risks.
+
+## How Djed works
+
+<figure>
+  <img src="/images/how-djed-works.webp">
+  <figcaption>How Djed Works</figcaption>
+</figure>
+
+Djed is designed to be stable and redeemable under any circumstances. It seeks to maintain a minimum and maximum reserve ratio between 400% and 800%. This means even if the base coin’s value drops suddenly by 75%, Djed’s stability isn’t compromised.
+
+The foundation of its stability lies in a reserve of intrinsically and independently valuable base coins (typically the native token of the underlying blockchain).
+
+- Base coins are added to the reserve whenever stablecoins or reserve coins are minted/bought.
+
+- Every buy/mint or sell/burn transaction incurs a small fee which is added to the reserve increasing the backing of stablecoins and the reserve surplus.
+
+The mechanism is designed to motivate base coin holders to provide liquidity by buying reserve coins, thereby reinforcing Djed’s stability. And for each stablecoin in circulation, it is backed by 4 to 8 times the amount in base coins, to ensure the stablecoin value is well-protected.
+
+- Should the reserve ratio fall below 400%, new stablecoin issuance halts, and reserve coins cannot be burned, to prevent the reserve ratio from dropping further.
+
+- Djed-based stablecoins remain redeemable at all times.
+
+*[Learn more about the Djed Stablecoin design](https://iohk.io/en/research/library/papers/djed-a-formally-verified-crypto-backed-pegged-algorithmic-stablecoin/)*
+
+## Djed compared to other stablecoins
+
+<figure>
+  <img src="/images/comparing-djed-to-other-stablecoins.webp">
+  <figcaption>Djed Compare to other stables</figcaption>
+</figure>
+
+## Final words
+
+Djed stands out as a stablecoin adeptly addressing the stablecoin trilemma. It is being actively deployed and tested across numerous networks, and used in real-world environments. [The Stable Order](https://djed.one/) is committed to continuous research, gathering feedback, monitoring performance, and refining the framework with every deployment.
+
+## About the Djed Alliance
+The [Djed Alliance](https://djed.one/) aims to stabilize the digital economy through the Djed Stablecoin Protocol.
+
+The Djed Stablecoin Protocol is deployed across multiple networks and can be used to create your stablecoin. Join our [growing community](https://discord.gg/ggxP4ttHgN) and together, we will advance the future of the decentralized economy.5:["$","$Lf",null,{"post":{"slug":"what-is-djed-stablecoin-protocol","title":"What is the Djed Stablecoin Protocol?","author":"Wen-Chiao Su","date":"2024-03-19","image":"/images/djed-stablecoin-protocol.webp","excerpt":"Djed is a formally verified, crypto-backed stablecoin protocol that ensures decentralized, resilient price stability.","featured":false,"content":"$10"}}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+8:null
+d:[["$","title","0",{"children":"Stable Viewpoints"}],["$","meta","1",{"name":"description","content":"An independent and decentralized publication focused on stability."}],["$","meta","2",{"name":"author","content":"Stable Viewpoints"}],["$","meta","3",{"name":"keywords","content":"stablecoins,blockchain,cryptocurrency,DeFi,economic stability,monetary systems,AI governance"}],["$","meta","4",{"name":"creator","content":"Stable Viewpoints"}],["$","meta","5",{"name":"publisher","content":"Stable Viewpoints"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://viewpoints.stability.nexus/"}],["$","meta","9",{"property":"og:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","10",{"property":"og:description","content":"An independent and decentralized publication focused on stability. Explore thoughtful perspectives on blockchain, cryptocurrencies, AI, DeFi, and economic stability."}],["$","meta","11",{"property":"og:url","content":"https://viewpoints.stability.nexus/"}],["$","meta","12",{"property":"og:site_name","content":"Stable Viewpoints"}],["$","meta","13",{"property":"og:locale","content":"en_US"}],["$","meta","14",{"property":"og:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:site","content":"@StabilityNexus"}],["$","meta","21",{"name":"twitter:creator","content":"@StabilityNexus"}],["$","meta","22",{"name":"twitter:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","23",{"name":"twitter:description","content":"An independent and decentralized publication focused on stability."}],["$","meta","24",{"name":"twitter:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","link","25",{"rel":"icon","href":"/images/favicon.ico"}],["$","link","26",{"rel":"apple-touch-icon","href":"/images/favicon.ico"}]]

@@ -1,0 +1,75 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+4:I[168,["874","static/chunks/874-af28c07e2d77bec7.js","345","static/chunks/app/not-found-6a3d6b88bf038d1d.js"],"default"]
+6:I[9665,[],"OutletBoundary"]
+9:I[3063,["63","static/chunks/63-94c05604d1f62b03.js","209","static/chunks/app/loading-8f725c68b84b7278.js"],"Image"]
+a:I[9665,[],"ViewportBoundary"]
+c:I[9665,[],"MetadataBoundary"]
+e:I[6614,[],""]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/eaead17c7dbfcd5d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","style"]
+0:{"P":null,"b":"TQP8OnOJubGH464hZl7FR","p":"/StableViewpoints/pr-preview/pr-1","c":["","a","djed-stablecoin-oracles-across-chains",""],"i":false,"f":[[["",{"children":["a",{"children":[["slug","djed-stablecoin-oracles-across-chains","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_363ac1 __variable_92842a","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L4",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["a",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","djed-stablecoin-oracles-across-chains","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5","$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false]},null,false]},[["$","div","l",{"className":"min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","$L9",null,{"src":"/logo-animated.gif","alt":"Loading...","width":80,"height":80,"unoptimized":true,"className":"w-20 h-20 mx-auto mb-4"}],["$","p",null,{"className":"text-gray-600","children":"Loading..."}]]}]}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","aSwDOqNKaysD9JAhXCSrq",{"children":[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:I[6835,["874","static/chunks/874-af28c07e2d77bec7.js","63","static/chunks/63-94c05604d1f62b03.js","12","static/chunks/12-75da118738931337.js","762","static/chunks/app/a/%5Bslug%5D/page-43340484a7e88e5f.js"],"default"]
+10:T1361,
+# Djed Stablecoin Oracles Across Chains
+
+In our [previous article](https://medium.com/djed-alliance/stablecoin-price-oracles-a-primer-db60018ecb58), we explored the role of price oracles in stablecoins, focusing on their design, types, and risks.
+
+This piece delves deeper into how pricing oracles are structured, specifically the Djed Stablecoin Protocol and the pricing oracle used across its multi-chain deployment.
+
+## Introduction
+
+Pricing oracles are the lifeline of stablecoins, providing accurate and timely data to ensure the assets maintain their peg. However, not all oracles are created equal. The choice and design of oracle sources significantly impact a stablecoin’s stability. When outliers or discrepancies arise in pricing data, they can distort the system, leading to de-pegging, loss of user trust, and cascading failures.
+
+This piece will analyze the intricacies of oracle sources, how Djed structures them to operate across chains, and why addressing outliers is essential to maintain the trust and integrity of a decentralized financial system.
+
+For those new to the concept, be sure to check out _[Stablecoin Price Oracles — A Primer for a primer](https://medium.com/djed-alliance/stablecoin-price-oracles-a-primer-db60018ecb58)_ into how oracles work in the stablecoin ecosystem.
+
+## Why pricing oracles matter for stablecoins
+
+Stablecoins rely on accurate oracles to prevent de-pegging from their target values. When oracles aggregate data from multiple sources and filter out inaccuracies, they provide trustworthy prices. In Djed’s case, oracles directly influence reserve ratios, transaction fees, and overall stability.
+
+## Overview on Djed-based Stablecoins
+
+<figure>
+    <img src="/images/Overview%20on%20Djed-based%20Stablecoins.webp">
+    <figcaption>Overview on Djed-based Stablecoins</figcaption>
+</figure>
+  
+To learn more about each oracle implementation, please refer to [this page](https://docs.stability.nexus/djed-stablecoin-protocols/deployments).
+
+## Relevance of oracle sources
+
+The integrity of a price oracle depends heavily on the quality and diversity of its data sources. Single-source feeds, while straightforward and sometimes necessary for specific use cases, carry significant risks.
+
+If a centralized data source is compromised, the oracle may relay faulty or manipulated data, leading to system-wide vulnerabilities. In the context of stablecoins like Djed, this could result in severe consequences, such as de-pegging or loss of reserve.
+
+## Decentralized oracles in stablecoin stability
+
+Decentralized oracles address these risks by pulling data from multiple independent sources and having multiple operators. This mitigates single points of failure and ensures that reported prices reflect a market-wide consensus rather than relying on a single source. For stablecoins, this is critical — attackers cannot easily exploit a decentralized oracle to manipulate prices without simultaneously compromising a wide network of independent nodes and data providers.
+
+## Addressing outliers
+
+Outlier detection serves as a defense against market manipulation in price oracle systems. By spotting and filtering out unusual price data, these systems prevent isolated market anomalies from skewing the overall price feed.
+
+A key goal is maintaining consistent data across network nodes. By establishing clear price boundaries, the system can exclude extreme values that could distort the price feed. This approach helps decentralized systems run more smoothly and reliably — particularly important for stablecoin protocols that depend on precise, real-time price information to maintain stability.
+
+For automated stablecoin protocols, this accuracy is essential as code is law and is immutable. It needs trustworthy, real-time price data to maintain the peg.
+
+## Conclusion
+
+Ultimately, oracle design can make or break a stablecoin protocol. Strong, decentralized price feeds protect against manipulation and data corruption. These risks aren’t merely theoretical — they can undermine the entire protocol’s stability and user trust.
+
+For Djed-based stablecoins deployed by The Stable Order, the approach taken is to rely on the best independent free oracles available on the underlying blockchain at the moment when the deployment was made. The Stable Order does not operate any oracles. When using any Djed-based stablecoin, independently of who developed it, it is important to know on which oracle operators it depends and whether these operators are trustworthy, because such operators detain a lot of power.
+
+## About the Djed Alliance
+
+The [Djed Alliance](https://djed.one/) aims to stabilize the digital economy through the Djed Stablecoin Protocol.
+
+The Djed Stablecoin Protocol is deployed across multiple networks and can be used to create your stablecoin. Join our [growing community](https://discord.gg/ggxP4ttHgN) and together, we will advance the future of the decentralized economy.5:["$","$Lf",null,{"post":{"slug":"djed-stablecoin-oracles-across-chains","title":"Djed Stablecoin Oracles Across Chains","author":"Wen-Chiao Su","date":"2025-02-10","image":"/images/djed-stablecoin-oracles.webp","excerpt":"Explains how Djed’s cross-chain price oracles gather reliable data and filter out outliers to protect stablecoin peg integrity.","featured":false,"content":"$10"}}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+8:null
+d:[["$","title","0",{"children":"Stable Viewpoints"}],["$","meta","1",{"name":"description","content":"An independent and decentralized publication focused on stability."}],["$","meta","2",{"name":"author","content":"Stable Viewpoints"}],["$","meta","3",{"name":"keywords","content":"stablecoins,blockchain,cryptocurrency,DeFi,economic stability,monetary systems,AI governance"}],["$","meta","4",{"name":"creator","content":"Stable Viewpoints"}],["$","meta","5",{"name":"publisher","content":"Stable Viewpoints"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://viewpoints.stability.nexus/"}],["$","meta","9",{"property":"og:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","10",{"property":"og:description","content":"An independent and decentralized publication focused on stability. Explore thoughtful perspectives on blockchain, cryptocurrencies, AI, DeFi, and economic stability."}],["$","meta","11",{"property":"og:url","content":"https://viewpoints.stability.nexus/"}],["$","meta","12",{"property":"og:site_name","content":"Stable Viewpoints"}],["$","meta","13",{"property":"og:locale","content":"en_US"}],["$","meta","14",{"property":"og:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:site","content":"@StabilityNexus"}],["$","meta","21",{"name":"twitter:creator","content":"@StabilityNexus"}],["$","meta","22",{"name":"twitter:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","23",{"name":"twitter:description","content":"An independent and decentralized publication focused on stability."}],["$","meta","24",{"name":"twitter:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","link","25",{"rel":"icon","href":"/images/favicon.ico"}],["$","link","26",{"rel":"apple-touch-icon","href":"/images/favicon.ico"}]]

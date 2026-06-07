@@ -1,0 +1,58 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+4:I[168,["874","static/chunks/874-af28c07e2d77bec7.js","345","static/chunks/app/not-found-6a3d6b88bf038d1d.js"],"default"]
+6:I[9665,[],"OutletBoundary"]
+9:I[3063,["63","static/chunks/63-94c05604d1f62b03.js","209","static/chunks/app/loading-8f725c68b84b7278.js"],"Image"]
+a:I[9665,[],"ViewportBoundary"]
+c:I[9665,[],"MetadataBoundary"]
+e:I[6614,[],""]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/eaead17c7dbfcd5d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","style"]
+0:{"P":null,"b":"TQP8OnOJubGH464hZl7FR","p":"/StableViewpoints/pr-preview/pr-1","c":["","a","pr-preview-environments-automating-review-workflows",""],"i":false,"f":[[["",{"children":["a",{"children":[["slug","pr-preview-environments-automating-review-workflows","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_363ac1 __variable_92842a","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L4",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["a",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","pr-preview-environments-automating-review-workflows","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5","$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false]},null,false]},[["$","div","l",{"className":"min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","$L9",null,{"src":"/logo-animated.gif","alt":"Loading...","width":80,"height":80,"unoptimized":true,"className":"w-20 h-20 mx-auto mb-4"}],["$","p",null,{"className":"text-gray-600","children":"Loading..."}]]}]}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","93rd4gEafFSYaEBAhKmxk",{"children":[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:I[6835,["874","static/chunks/874-af28c07e2d77bec7.js","63","static/chunks/63-94c05604d1f62b03.js","12","static/chunks/12-75da118738931337.js","762","static/chunks/app/a/%5Bslug%5D/page-43340484a7e88e5f.js"],"default"]
+10:Tbd1,
+# PR Preview Environments: Automating Review Workflows for Open Source Projects
+
+In open-source projects, Pull Requests are the heartbeat of collaboration. A developer writes code, opens a PR, and a reviewer checks it before merging. But what happens when the reviewer isn't a developer? What if they're a writer submitting an article, a designer tweaking a layout, or a mentor evaluating a student's work?
+
+## The Problem
+
+Traditionally, reviewing a frontend change requires the reviewer to:
+
+1. Clone the repository
+2. Install Node.js and project dependencies
+3. Run the development server locally
+4. Navigate to the changed page to verify it visually
+
+This is a significant barrier. Many contributors — especially content writers, designers, and project mentors — don't have a local development environment set up. They're forced to review raw code diffs on GitHub, which tells them almost nothing about how the change actually looks.
+
+## The Solution: Automated PR Previews
+
+A PR Preview Environment is a temporary, isolated deployment that is automatically created every time a Pull Request is opened. The moment a contributor pushes code, a CI/CD pipeline builds the project and deploys it to a unique URL. The reviewer simply clicks a link in the PR comment and sees the live result.
+
+For **static sites** (like this blog), the preview can be hosted for free on GitHub Pages. The workflow builds the Next.js app with `output: "export"`, pushes the static files to a `gh-pages` branch under a unique subdirectory, and posts the URL as a PR comment. When the PR is closed, the preview is automatically cleaned up.
+
+For **full-stack applications** (like Web3 dApps with smart contracts), the approach is more sophisticated. The CI/CD pipeline can spin up an ephemeral blockchain node, deploy the modified smart contracts, start a live development server, and expose it to the internet through a secure Cloudflare Tunnel — all inside a GitHub Actions runner.
+
+## Why This Matters
+
+PR preview environments democratize the review process. A technical mentor can verify a student's UI changes without cloning the repo. A content editor can see exactly how their article will render before it's published. A stakeholder can test a new feature without asking for a staging deployment.
+
+The result is faster review cycles, fewer "looks good to me" approvals on untested code, and a more inclusive open-source community where everyone — regardless of technical skill — can meaningfully participate in the review process.
+
+## Architecture Overview
+
+The architecture adapts to the project type:
+
+- **100% Static Apps** (Next.js with `output: "export"`, React with Vite) → GitHub Pages
+- **Server-Side Rendered Apps** (Next.js SSR, Express backends) → Cloudflare Tunnel
+- **Full-Stack Web3 Apps** (Smart Contracts + Frontend) → Ephemeral Anvil Node + Cloudflare Tunnel
+
+Each approach uses the same principle: automate the deployment, post the link, and let the reviewer focus on what matters — the actual change.
+5:["$","$Lf",null,{"post":{"slug":"pr-preview-environments-automating-review-workflows","title":"PR Preview Environments: Automating Review Workflows for Open Source Projects","author":"Atharva Naik","date":"2025-06-07","image":"/images/stablecoins.webp","excerpt":"How automated PR preview deployments help non-technical reviewers verify changes without running code locally, making open-source collaboration faster and more inclusive.","featured":true,"content":"$10"}}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+8:null
+d:[["$","title","0",{"children":"Stable Viewpoints"}],["$","meta","1",{"name":"description","content":"An independent and decentralized publication focused on stability."}],["$","meta","2",{"name":"author","content":"Stable Viewpoints"}],["$","meta","3",{"name":"keywords","content":"stablecoins,blockchain,cryptocurrency,DeFi,economic stability,monetary systems,AI governance"}],["$","meta","4",{"name":"creator","content":"Stable Viewpoints"}],["$","meta","5",{"name":"publisher","content":"Stable Viewpoints"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://viewpoints.stability.nexus/"}],["$","meta","9",{"property":"og:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","10",{"property":"og:description","content":"An independent and decentralized publication focused on stability. Explore thoughtful perspectives on blockchain, cryptocurrencies, AI, DeFi, and economic stability."}],["$","meta","11",{"property":"og:url","content":"https://viewpoints.stability.nexus/"}],["$","meta","12",{"property":"og:site_name","content":"Stable Viewpoints"}],["$","meta","13",{"property":"og:locale","content":"en_US"}],["$","meta","14",{"property":"og:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:site","content":"@StabilityNexus"}],["$","meta","21",{"name":"twitter:creator","content":"@StabilityNexus"}],["$","meta","22",{"name":"twitter:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","23",{"name":"twitter:description","content":"An independent and decentralized publication focused on stability."}],["$","meta","24",{"name":"twitter:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","link","25",{"rel":"icon","href":"/images/favicon.ico"}],["$","link","26",{"rel":"apple-touch-icon","href":"/images/favicon.ico"}]]

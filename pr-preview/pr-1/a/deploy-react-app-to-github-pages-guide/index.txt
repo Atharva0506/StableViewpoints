@@ -1,0 +1,240 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+4:I[168,["874","static/chunks/874-af28c07e2d77bec7.js","345","static/chunks/app/not-found-6a3d6b88bf038d1d.js"],"default"]
+6:I[9665,[],"OutletBoundary"]
+9:I[3063,["63","static/chunks/63-94c05604d1f62b03.js","209","static/chunks/app/loading-8f725c68b84b7278.js"],"Image"]
+a:I[9665,[],"ViewportBoundary"]
+c:I[9665,[],"MetadataBoundary"]
+e:I[6614,[],""]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/eaead17c7dbfcd5d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","style"]
+0:{"P":null,"b":"TQP8OnOJubGH464hZl7FR","p":"/StableViewpoints/pr-preview/pr-1","c":["","a","deploy-react-app-to-github-pages-guide",""],"i":false,"f":[[["",{"children":["a",{"children":[["slug","deploy-react-app-to-github-pages-guide","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_363ac1 __variable_92842a","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L4",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["a",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","deploy-react-app-to-github-pages-guide","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5","$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false]},null,false]},[["$","div","l",{"className":"min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","$L9",null,{"src":"/logo-animated.gif","alt":"Loading...","width":80,"height":80,"unoptimized":true,"className":"w-20 h-20 mx-auto mb-4"}],["$","p",null,{"className":"text-gray-600","children":"Loading..."}]]}]}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","F6EVufdLnMJH5bByGRLLD",{"children":[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:I[6835,["874","static/chunks/874-af28c07e2d77bec7.js","63","static/chunks/63-94c05604d1f62b03.js","12","static/chunks/12-75da118738931337.js","762","static/chunks/app/a/%5Bslug%5D/page-43340484a7e88e5f.js"],"default"]
+10:T1da0,
+# Improving Dapp Stability by Eliminating Dependencies to Centralized Services: A Complete Guide for Deployment of a React.js Application to GitHub Pages
+
+As we transition towards more decentralized solutions, moving projects to GitHub Pages for deployment has become an increasingly popular choice. Not only does it reduce the reliance on centralized service providers like Vercel, but it also increases resilience, censorship resistance, and long-term stability.
+
+In this article, we will explore how to deploy a React.js application to GitHub Pages, and share some tricks and best practices that we’ve learned through this process. This tutorial will cover everything from configuring your React.js app for static export, to setting up automated deployment via GitHub Actions.
+
+### Why GitHub Pages?
+GitHub Pages is a great choice for hosting static websites because:
+
+- Decentralization: It’s hosted on GitHub, a version control platform that allows for greater control over your code and deployment.
+- Censorship Resistance: GitHub Pages, while centralized, provides a platform where developers can deploy content without relying on a third-party provider.
+- Resilience: With GitHub’s global infrastructure, your project benefits from robust reliability and uptime.
+
+This makes GitHub Pages a solid option for those looking to deploy their static sites with greater control and fewer dependencies.
+
+## Setting Up Your React.js Project for GitHub Pages
+
+**Follow Step 1 Only if using Vite.**
+
+### Step 1: Configure vite.config.ts Base Path
+
+Before deploying to GitHub Pages, if you are using the default url for gh-pages https://<username>.github.io/<repository-name>/ we need to make sure that the base path is set to the repo name.
+
+Here’s how to configure your vite.config.ts:
+
+```
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  base: "/your-base-path/",
+});
+```
+
+**Key Configurations:**
+- base Path: “/your-repository-name”: GitHub Pages serves content under a specific base path if you are using a repository (as opposed to a custom domain).
+
+### Step 2: Add homepage to package.json
+
+The step below is important! If you skip it, your app will not deploy correctly. Open your package.json and add a homepage field for your project:
+
+```
+"homepage": "https://myusername.github.io/my-app",
+```
+
+or for a GitHub user page:
+
+```
+"homepage": "https://myusername.github.io",
+```
+
+or for a custom domain page:
+
+```
+"homepage": "https://mywebsite.com",
+```
+
+If using CRA Keep in mind Create React App uses the homepage field to determine the root URL in the built HTML file.
+
+### Step 3: Install gh-pages and add deploy to scripts in package.json
+
+Now, whenever you run npm run build, you will see a cheat sheet with instructions on how to deploy to GitHub Pages.
+
+To publish it at `https://myusername.github.io/my-app`, run:
+
+```
+npm install - save gh-pages
+```
+
+Alternatively you may use yarn:
+
+```
+yarn add gh-pages
+```
+
+Add the following scripts in your package.json:
+
+```
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "start": "react-scripts start",
+  "build": "react-scripts build"
+}
+```
+
+The predeploy script will run automatically before deploy is run.
+
+#### Setting Up GitHub Actions for Deployment
+
+Now that we’ve configured the React.js app, let’s automate the deployment process using GitHub Actions. GitHub Actions is a powerful tool for automating workflows, and it integrates perfectly with GitHub Pages to deploy your app whenever you push changes to the main branch.Go to your GitHub Pages configuration in the repository settings page and choose the source of deployment as “GitHub Actions”.
+
+### Step 4: Create a GitHub Actions Workflow
+
+Create a new file in your repository at .github/workflows/node.js.yml. This will contain the instructions for building and deploying your site to GitHub Pages.
+
+Here is the sample workflow for deploying a React.js app to GitHub Pages:
+
+```
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload dist folder
+          path: "./dist"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+#### Key Steps in the Workflow
+Trigger Workflow:
+
+- A push is made to the main branch.
+- A manual trigger is initiated from the Actions tab (workflow_dispatch).
+
+**Set Permissions:**
+Grants the required permissions:
+
+- contents: read: To read the repository’s content.
+- pages: write: To enable deployment to GitHub Pages.
+- id-token: write: For authentication during deployment.
+
+Enforce Deployment Concurrency:
+
+- Ensures that only one deployment runs at a time.
+- Cancels any in-progress deployments if a new one starts.
+
+Checkout Code:
+- Checks out the repository code using the actions/checkout action.
+
+Set Up Node.js:
+- Configures the required Node.js environment:
+- Sets the Node.js version to 20.
+- Enables dependency caching using npm.
+
+Install Dependencies:
+
+- Installs project dependencies using:
+npm ci
+
+Build the App:
+
+Builds the static files for the app using the build script:
+- npm run build
+- The output (typically the dist directory) contains the static files.
+
+Configure GitHub Pages:
+
+- Prepares the repository for deployment to GitHub Pages using actions/configure-pages.
+
+Upload Build Artifact:
+
+- Uploads the built static files (from the dist folder) as an artifact using actions/upload-pages-artifact.
+
+Deploy to GitHub Pages:
+
+- Deploys the static files to GitHub Pages using actions/deploy-pages.
+- Outputs the deployment URL for reference.
+
+## Deployment URL
+
+Once your workflow runs successfully, your site will be deployed to GitHub Pages under the following URL:
+
+`https://<your-github-username>.github.io/<your-repository-name>`
+
+Deploying a React.js app to GitHub Pages might seem daunting at first, especially with the need for careful configuration of GitHub Actions. However, with this setup, you gain significant benefits in terms of decentralization and resilience.
+
+This tutorial provided the steps to configure your app to set up the necessary vite.config.ts options, and automate deployment with GitHub Actions. By following these steps, you can seamlessly deploy your React.js projects with minimal reliance on centralized providers and make your project more robust in the long run.
+
+Happy coding, and enjoy the power of decentralized web hosting with GitHub Pages!5:["$","$Lf",null,{"post":{"slug":"deploy-react-app-to-github-pages-guide","title":"Improving Dapp Stability by Eliminating Dependencies to Centralized Services: A Complete Guide for Deployment of a React.js Application to GitHub Pages","author":"Zain","date":"2024-12-08","image":"/images/deploy-react-app.webp","excerpt":"Step-by-step guide to deploying a React.js application to GitHub Pages — ideal for decentralized web projects.","featured":false,"content":"$10"}}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+8:null
+d:[["$","title","0",{"children":"Stable Viewpoints"}],["$","meta","1",{"name":"description","content":"An independent and decentralized publication focused on stability."}],["$","meta","2",{"name":"author","content":"Stable Viewpoints"}],["$","meta","3",{"name":"keywords","content":"stablecoins,blockchain,cryptocurrency,DeFi,economic stability,monetary systems,AI governance"}],["$","meta","4",{"name":"creator","content":"Stable Viewpoints"}],["$","meta","5",{"name":"publisher","content":"Stable Viewpoints"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://viewpoints.stability.nexus/"}],["$","meta","9",{"property":"og:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","10",{"property":"og:description","content":"An independent and decentralized publication focused on stability. Explore thoughtful perspectives on blockchain, cryptocurrencies, AI, DeFi, and economic stability."}],["$","meta","11",{"property":"og:url","content":"https://viewpoints.stability.nexus/"}],["$","meta","12",{"property":"og:site_name","content":"Stable Viewpoints"}],["$","meta","13",{"property":"og:locale","content":"en_US"}],["$","meta","14",{"property":"og:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:site","content":"@StabilityNexus"}],["$","meta","21",{"name":"twitter:creator","content":"@StabilityNexus"}],["$","meta","22",{"name":"twitter:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","23",{"name":"twitter:description","content":"An independent and decentralized publication focused on stability."}],["$","meta","24",{"name":"twitter:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","link","25",{"rel":"icon","href":"/images/favicon.ico"}],["$","link","26",{"rel":"apple-touch-icon","href":"/images/favicon.ico"}]]

@@ -1,0 +1,52 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1295,[],""]
+4:I[168,["874","static/chunks/874-af28c07e2d77bec7.js","345","static/chunks/app/not-found-6a3d6b88bf038d1d.js"],"default"]
+6:I[9665,[],"OutletBoundary"]
+9:I[3063,["63","static/chunks/63-94c05604d1f62b03.js","209","static/chunks/app/loading-8f725c68b84b7278.js"],"Image"]
+a:I[9665,[],"ViewportBoundary"]
+c:I[9665,[],"MetadataBoundary"]
+e:I[6614,[],""]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/media/eaead17c7dbfcd5d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","style"]
+0:{"P":null,"b":"TQP8OnOJubGH464hZl7FR","p":"/StableViewpoints/pr-preview/pr-1","c":["","a","bug-bounty-program",""],"i":false,"f":[[["",{"children":["a",{"children":[["slug","bug-bounty-program","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/StableViewpoints/pr-preview/pr-1/_next/static/css/c488f3d62c33b426.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_363ac1 __variable_92842a","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L4",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["a",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","bug-bounty-program","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5","$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false]},null,false]},[["$","div","l",{"className":"min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","$L9",null,{"src":"/logo-animated.gif","alt":"Loading...","width":80,"height":80,"unoptimized":true,"className":"w-20 h-20 mx-auto mb-4"}],["$","p",null,{"className":"text-gray-600","children":"Loading..."}]]}]}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","imCB4wJpKEMoiedM1eU2c",{"children":[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:I[6835,["874","static/chunks/874-af28c07e2d77bec7.js","63","static/chunks/63-94c05604d1f62b03.js","12","static/chunks/12-75da118738931337.js","762","static/chunks/app/a/%5Bslug%5D/page-43340484a7e88e5f.js"],"default"]
+10:Tc7f,
+# Bug Bounty Program for Gluon on Ergo
+
+We’re launching a Bug Bounty Program for The Stable Order’s implementation of the Gluon Protocol on the Ergo blockchain. Gluon is a new and innovative stablecoin protocol designed by Dr. Bruno Woltzenlogel Paleo (a.k.a. Zahnentferner). Gluon Gold on Ergo ([https://gluon.gold](https://gluon.gold)) is the first implementation of this protocol in the blockchain space, with the stablecoin pegged to gold. This represents a significant advancement in stablecoin technology on the Ergo blockchain.
+
+The bug bounty program aims to protect users and their funds from potential vulnerabilities in the smart contract. We’ll be rewarding anyone who identifies and reports critical bugs that could enable fund theft.
+
+Program Scope: This bug bounty program only covers critical bugs found in the code repository at [https://github.com/DjedAlliance/Gluon-Ergo-Backend-Contracts](https://github.com/DjedAlliance/Gluon-Ergo-Backend-Contracts). Critical bugs are defined as vulnerabilities that could allow an attacker to steal funds. For non-critical bugs, please contact us.
+
+Reporting Process: Please report the critical bug to [gluon.alliance@gmail.com](mailto:gluon.alliance@gmail.com). Reach out to us privately on Discord or Telegram. Do not disclose the bug publicly until it is resolved. If possible, please exploit the bug to secure and return any affected user funds. We will work together to resolve the issue quickly.
+
+Reward Structure: We offer a reward in gluons (The Stable Order’s contribution accounting token). The *initial reward amount* is equal in value to the sum of the following:
+
+- A base reward of 50,000 gluons.
+- 50% of the funds that could have been stolen from Gluon Gold on Ergo at the moment when it is reported.
+- 50% of the funds that were safeguarded by the bug reporter, if they exploited the bug, secured the funds, and returned them to the users.
+
+To encourage bugs to be reported quickly, the reward amount decreases linearly as time passes until a minimum reward amount is reached, according to the following formula:
+
+R(t) = max((1 — t/1000) \* R\* , R\*/10)
+
+Where:
+
+- R* is the initial reward amount.
+- t is the number of days between the day in which the bug was reported and 2024–07–10 (10th of July 2024)
+
+Transparency: As part of our bug bounty program, we will publicly disclose every critical bug that has been resolved, along with details about the resolution process. This includes the total payout amount (in gluons) and the average resolution time, while protecting the identities of the bug reporters.
+
+By participating in this program, you’ll be contributing to the security and protection of Gluon Gold on Ergo and its users. We’re excited to collaborate with security researchers who share our dedication to securing blockchain and smart contract systems.
+
+Questions? If you have any questions or concerns, feel free to reach out to us on our Discord server: [https://discord.gg/xgUybE4s7G](https://discord.gg/xgUybE4s7G). Thank you for your interest in securing the Gluon Stablecoin Protocol.
+
+*Note: This announcement was written by Cannon_q, Ergo's Sigmanaut and Knight of the Stable Order.*
+5:["$","$Lf",null,{"post":{"slug":"bug-bounty-program","title":"Bug Bounty Program for Gluon on Ergo","author":"Zahnentferner","date":"2024-07-10","image":"/images/gluon-stablecoin-bug-bounty-program.webp","excerpt":"Gluon is launching a bug bounty program on Ergo — security researchers are invited to report vulnerabilities.","featured":false,"content":"$10"}}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+8:null
+d:[["$","title","0",{"children":"Stable Viewpoints"}],["$","meta","1",{"name":"description","content":"An independent and decentralized publication focused on stability."}],["$","meta","2",{"name":"author","content":"Stable Viewpoints"}],["$","meta","3",{"name":"keywords","content":"stablecoins,blockchain,cryptocurrency,DeFi,economic stability,monetary systems,AI governance"}],["$","meta","4",{"name":"creator","content":"Stable Viewpoints"}],["$","meta","5",{"name":"publisher","content":"Stable Viewpoints"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://viewpoints.stability.nexus/"}],["$","meta","9",{"property":"og:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","10",{"property":"og:description","content":"An independent and decentralized publication focused on stability. Explore thoughtful perspectives on blockchain, cryptocurrencies, AI, DeFi, and economic stability."}],["$","meta","11",{"property":"og:url","content":"https://viewpoints.stability.nexus/"}],["$","meta","12",{"property":"og:site_name","content":"Stable Viewpoints"}],["$","meta","13",{"property":"og:locale","content":"en_US"}],["$","meta","14",{"property":"og:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:site","content":"@StabilityNexus"}],["$","meta","21",{"name":"twitter:creator","content":"@StabilityNexus"}],["$","meta","22",{"name":"twitter:title","content":"Stable Viewpoints - Independent Articles about Stability"}],["$","meta","23",{"name":"twitter:description","content":"An independent and decentralized publication focused on stability."}],["$","meta","24",{"name":"twitter:image","content":"https://viewpoints.stability.nexus/stability-nexus-og.png"}],["$","link","25",{"rel":"icon","href":"/images/favicon.ico"}],["$","link","26",{"rel":"apple-touch-icon","href":"/images/favicon.ico"}]]
